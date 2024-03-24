@@ -1,0 +1,15 @@
+def calculate_total(food_charge):
+    tip = 0.18 * food_charge
+    sales_tax = 0.07 * food_charge
+    total_amount = food_charge + tip + sales_tax
+    return tip, sales_tax, total_amount
+
+def main():
+    food_charge = float(input("Enter the charge for the food: $"))
+    tip, sales_tax, total_amount = calculate_total(food_charge)
+    print("Amount of 18% tip: $", format(tip, ".2f"))
+    print("Amount of 7% sales tax: $", format(sales_tax, ".2f"))
+    print("Total amount: $", format(total_amount, ".2f"))
+
+if __name__ == "__main__":
+    main()
