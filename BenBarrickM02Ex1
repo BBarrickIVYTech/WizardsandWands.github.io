@@ -1,0 +1,27 @@
+def mix_colors(color1, color2):
+    if color1 == color2:
+        return color1
+    
+    if (color1 == "red" and color2 == "blue") or (color1 == "blue" and color2 == "red"):
+        return "purple"
+    elif (color1 == "red" and color2 == "yellow") or (color1 == "yellow" and color2 == "red"):
+        return "orange"
+    elif (color1 == "blue" and color2 == "yellow") or (color1 == "yellow" and color2 == "blue"):
+        return "green"
+    else:
+        return "Error: Please enter valid primary colors: red, blue, or yellow."
+
+
+def main():
+    color1 = input("Enter the first primary color (red, blue, or yellow): ").lower()
+    color2 = input("Enter the second primary color (red, blue, or yellow): ").lower()
+
+    if color1 not in ["red", "blue", "yellow"] or color2 not in ["red", "blue", "yellow"]:
+        print("Error: Please enter valid primary colors: red, blue, or yellow.")
+    else:
+        result = mix_colors(color1, color2)
+        print(f"Mixing {color1} and {color2} gives you {result}.")
+
+
+if __name__ == "__main__":
+    main()
