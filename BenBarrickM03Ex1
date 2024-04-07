@@ -1,0 +1,14 @@
+def sum_single_digits(numbers):
+    total = 0
+    for digit in numbers:
+        total += int(digit)
+    return total
+# input numbers
+user_input = input("Enter a series of single-digit numbers with nothing separating them: ")
+
+# Check if input contains only single-digit numbers
+if user_input.isdigit():
+    result = sum_single_digits(user_input)
+    print("The sum of single-digit numbers is:", result)
+else:
+    print("Invalid input. Please enter only single-digit numbers.")# output sum
