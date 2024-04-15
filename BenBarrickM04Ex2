@@ -1,0 +1,16 @@
+"""Ben Barrick Item Price counter v1"""
+
+def top_three_items(shop_data):
+    # Sort the items by their prices in descending order
+    sorted_items = sorted(shop_data.items(), key=lambda x: x[1], reverse=True)
+    
+    # Print the top three items
+    print("Top three items in the shop:")
+    for item, price in sorted_items[:3]:
+        print(f"{item} {price}")
+
+# Sample data
+shop_data = {'Apple': 0.50, 'Banana': 0.20, 'Mango': 0.99, 'Coconut': 2.99, 'Pineapple': 3.99}
+
+# Get the top three items
+top_three_items(shop_data)
