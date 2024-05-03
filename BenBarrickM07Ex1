@@ -1,0 +1,23 @@
+class Person:
+    def __init__(self, name, address, telephone_number):
+        self.name = name
+        self.address = address
+        self.telephone_number = telephone_number
+
+class Customer(Person):
+    def __init__(self, name, address, telephone_number, customer_number, on_mailing_list=False):
+        super().__init__(name, address, telephone_number)
+        self.customer_number = customer_number
+        self.on_mailing_list = on_mailing_list
+
+# Demonstration
+if __name__ == "__main__":
+    # Creating an instance of Customer
+    customer1 = Customer("John Doe", "123 Main St", "555-1234", "C12345", True)
+
+    # Accessing attributes of customer1
+    print("Customer Name:", customer1.name)
+    print("Customer Address:", customer1.address)
+    print("Customer Telephone Number:", customer1.telephone_number)
+    print("Customer Number:", customer1.customer_number)
+    print("On Mailing List:", "Yes" if customer1.on_mailing_list else "No")
